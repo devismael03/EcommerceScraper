@@ -1,7 +1,7 @@
 ﻿using ScrapeLogic;
 
 
-AbstractScraper scraper = new TapAzScraper();
+AbstractScraper scraper = new TrendyolScraper();
 Client user = new AuthenticatedUser(scraper);
 List<ProductDetail> result = user.Search("divan");
 
@@ -13,5 +13,5 @@ List<ProductDetail> filtered = user.Filter<double>(p => p.Price);
 Console.WriteLine("After filtering by price: ");
 
 foreach(ProductDetail detail in filtered){
-    Console.WriteLine($"{detail.Title} - {detail.Price}");
+    Console.WriteLine($"{detail.Title} - {detail.Description} {detail.Price}");
 }

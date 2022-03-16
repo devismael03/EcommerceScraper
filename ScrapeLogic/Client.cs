@@ -12,4 +12,7 @@ public abstract class Client{
         return result;
     }
 
+    public List<ProductDetail> Filter<T>(Func<ProductDetail,T> FilterCondition){
+        return Scraper.Filter<T>(FilterCondition);
+    }
 }
