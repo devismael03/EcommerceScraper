@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program\Program.csproj", "{7837A894-F004-41E0-B377-9226043D435F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrapeLogic", "ScrapeLogic\ScrapeLogic.csproj", "{0644E159-D336-4AD8-AA4B-9F42E75EDF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7837A894-F004-41E0-B377-9226043D435F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7837A894-F004-41E0-B377-9226043D435F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7837A894-F004-41E0-B377-9226043D435F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7837A894-F004-41E0-B377-9226043D435F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0644E159-D336-4AD8-AA4B-9F42E75EDF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0644E159-D336-4AD8-AA4B-9F42E75EDF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0644E159-D336-4AD8-AA4B-9F42E75EDF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0644E159-D336-4AD8-AA4B-9F42E75EDF13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
