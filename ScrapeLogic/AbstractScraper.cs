@@ -13,11 +13,13 @@ public abstract class AbstractScraper
         CreateWebDriver();
         Navigate();
         GetProducts(keyword);
+        GetDescriptions();
         return Products;
     }
     public abstract void CreateWebDriver();
     public abstract void Navigate();
     public abstract void GetProducts(string keyword);
+    public abstract  void GetDescriptions();
     public List<ProductDetail> Filter<T>(Func<ProductDetail,T> FilterCondition){
         return this.Products.OrderBy(FilterCondition).ToList();
     }

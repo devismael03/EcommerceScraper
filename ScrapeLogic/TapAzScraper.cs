@@ -39,6 +39,10 @@ public class TapAzScraper : AbstractScraper
             counter++;
         }
 
+        
+    }
+
+    public override void GetDescriptions(){
         StringBuilder sb = new StringBuilder();
         foreach(ProductDetail product in this.Products){
             this.Driver.Navigate().GoToUrl(product.Url);

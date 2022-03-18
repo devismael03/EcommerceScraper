@@ -3,7 +3,8 @@
 
 AbstractScraper scraper = new TrendyolScraper();
 Client user = new AuthenticatedUser(scraper);
-List<ProductDetail> result = user.Search("divan");
+string keyword = Console.ReadLine();
+List<ProductDetail> result = user.Search(keyword);
 
 foreach(ProductDetail detail in result){
     Console.WriteLine($"{detail.Title} - {detail.Price}");
