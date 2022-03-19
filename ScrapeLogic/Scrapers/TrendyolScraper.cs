@@ -2,8 +2,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Text;
 using System.Collections.ObjectModel;
+using ScrapeLogic.DTO;
 
-namespace ScrapeLogic;
+namespace ScrapeLogic.Scrapers;
 
 public class TrendyolScraper : AbstractScraper
 {
@@ -13,7 +14,7 @@ public class TrendyolScraper : AbstractScraper
         options.AddExcludedArgument("enable-logging"); 
         options.AddArguments("--disable-notifications");
 
-        this.Driver = new ChromeDriver(@"C:\Users\mamed\Downloads\chromedriver_win32",options=options);
+        this.Driver = new ChromeDriver(@"C:\Users\mamed\Downloads\chromedriver_win32",options);
     }
 
     public override void Navigate()

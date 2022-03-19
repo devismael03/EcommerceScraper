@@ -1,4 +1,4 @@
-namespace ScrapeLogic;
+namespace ScrapeLogic.DTO;
 
 public class ProductDetail{
     public ProductDetail(string title, string url, double price)

@@ -1,4 +1,8 @@
-namespace ScrapeLogic;
+using ScrapeLogic.Scrapers;
+using ScrapeLogic.DTO;
+
+namespace ScrapeLogic.Clients;
+
 
 public abstract class Client{
     protected AbstractScraper Scraper;

@@ -2,8 +2,9 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Text;
 using System.Collections.ObjectModel;
+using ScrapeLogic.DTO;
 
-namespace ScrapeLogic;
+namespace ScrapeLogic.Scrapers;
 
 public class TapAzScraper : AbstractScraper
 {

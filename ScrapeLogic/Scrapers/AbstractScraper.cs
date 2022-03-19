@@ -1,7 +1,7 @@
 ﻿
 using OpenQA.Selenium;
-using System.Linq;
-namespace ScrapeLogic;
+using ScrapeLogic.DTO;
+namespace ScrapeLogic.Scrapers;
 
 
 public abstract class AbstractScraper

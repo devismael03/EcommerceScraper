@@ -1,4 +1,6 @@
-﻿using ScrapeLogic;
+﻿using ScrapeLogic.Clients;
+using ScrapeLogic.DTO;
+using ScrapeLogic.Scrapers;
 
 
 AbstractScraper scraper = new TrendyolScraper();
