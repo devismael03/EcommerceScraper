@@ -1,6 +1,6 @@
 namespace ScrapeLogic.DTO;
 
-public class ProductDetail{
+public abstract class ProductDetail{
     public ProductDetail(string title, string url, double price)
     {
         Title = title;
