@@ -5,18 +5,22 @@ namespace ScrapeLogic.Clients;
 
 
 public abstract class Client{
-    protected AbstractScraper Scraper;
+    protected List<AbstractScraper> Scrapers;
 
-    public Client(AbstractScraper scraper){
-        Scraper = scraper;
+    public Client(List<AbstractScraper> scrapers){
+        Scrapers = scrapers;
     }
 
     public List<ProductDetail> Search(string keyword){
-        List<ProductDetail> result = Scraper.Search(keyword);
+        List<ProductDetail> result = new List<ProductDetail> ();
+        foreach(AbstractScraper scraper in Scrapers)
+        {
+            result.AddRange(scraper.Search(keyword));
+        }
         return result;
     }
 
-    public List<ProductDetail> Filter<T>(Func<ProductDetail,T> FilterCondition){
+    /*public List<ProductDetail> Filter<T>(Func<ProductDetail,T> FilterCondition){
         return Scraper.Filter<T>(FilterCondition);
-    }
+    }*/
 }

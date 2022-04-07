@@ -32,7 +32,7 @@ public class TapAzScraper : AbstractScraper
                 title = this.Driver.FindElement(By.XPath($"/html/body/div[5]/div/div/div[3]/div[2]/div[{counter}]/a/div[3]"));
                 price = this.Driver.FindElement(By.XPath($"/html/body/div[5]/div/div/div[3]/div[2]/div[{counter}]/a/div[2]/div/span[1]"));
                 url = this.Driver.FindElement(By.XPath($"/html/body/div[5]/div/div/div[3]/div[2]/div[{counter}]/a"));
-                this.Products.Add(new TapAzDetail(title.Text,url.GetAttribute("href"),Double.Parse(price.Text.Replace(" ",""))));
+                this.Products.Add(new TapAzDetail(title.Text,url.GetAttribute("href"),Double.Parse(price.Text.Replace(" ","")), "Tap.az", "AZN"));
             }catch(NoSuchElementException){
                 break;
             }
@@ -62,9 +62,9 @@ public class TapAzScraper : AbstractScraper
     
    
 
-    ~TapAzScraper(){
+    /*~TapAzScraper(){
         this.Driver.Dispose();
-    }
+    }*/
 
  
 }

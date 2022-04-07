@@ -1,0 +1,32 @@
+﻿@page "{searchString?}"
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form>
+    <p>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+        @foreach(var product in Model.Products)
+        {
+            <div class="card">
+                <div class="card-header">
+                    @product.Source
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@product.Title - @product.Price @product.Currency</h5>
+                    <p class="card-text">@product.Description</p>
+                    <a href="@product.Url" class="btn btn-primary">Go to product page</a>
+                </div>
+            </div>
+            <br />
+        }
+
+    </p>
+</form>
