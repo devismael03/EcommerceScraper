@@ -43,16 +43,16 @@ public class TrendyolScraper : AbstractScraper
         IWebElement title, price, url;
 
         int counter = 1;
-        while(counter < 11){
+        while(counter < 4){
             try{
                 title = this.Driver.FindElement(By.XPath($"/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[3]/div/div[{counter}]/div[1]/a/div[2]/div[1]/div/span[2]"));
                 price = this.Driver.FindElements(By.ClassName("prc-box-dscntd"))[counter-1];
                 url = this.Driver.FindElement(By.XPath($"/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[3]/div/div[{counter}]/div[1]/a"));
-                this.Products.Add(new TrendyolDetail(title.Text,url.GetAttribute("href"),Double.Parse(price.Text.Substring(0, price.Text.IndexOf(" "))),"Trendyol"));
+                this.Products.Add(new TrendyolDetail(title.Text,url.GetAttribute("href"),Double.Parse(price.Text.Substring(0, price.Text.IndexOf(" "))),"Trendyol","TL"));
             }catch(NoSuchElementException){
                 title = this.Driver.FindElement(By.XPath($"/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[4]/div/div[{counter}]/div[1]/a/div[2]/div[1]/div/span[2]"));
                 price = this.Driver.FindElements(By.ClassName("prc-box-dscntd"))[counter-1];
-                url = this.Driver.FindElement(By.XPath($"/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[3]/div/div[{counter}]/div[1]/a"));
+                url = this.Driver.FindElement(By.XPath($"/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[4]/div/div[{counter}]/div[1]/a"));
                 this.Products.Add(new TrendyolDetail(title.Text,url.GetAttribute("href"),Double.Parse(price.Text), "Trendyol", "TL"));
             }
 

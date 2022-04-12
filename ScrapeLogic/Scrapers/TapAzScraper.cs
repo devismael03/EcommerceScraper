@@ -27,7 +27,7 @@ public class TapAzScraper : AbstractScraper
         IWebElement title, price, url;
 
         int counter = 1;
-        while(counter < 11){
+        while(counter < 4){
             try{
                 title = this.Driver.FindElement(By.XPath($"/html/body/div[5]/div/div/div[3]/div[2]/div[{counter}]/a/div[3]"));
                 price = this.Driver.FindElement(By.XPath($"/html/body/div[5]/div/div/div[3]/div[2]/div[{counter}]/a/div[2]/div/span[1]"));
